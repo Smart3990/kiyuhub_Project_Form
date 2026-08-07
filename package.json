@@ -1,0 +1,19 @@
+{
+  "name": "kiyu-hub",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "client"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=client",
+    "build": "npm run build --workspace=client",
+    "lint": "npm run lint --workspace=client",
+    "preview": "npm run preview --workspace=client"
+  },
+  "dependencies": {
+    "@types/canvas-confetti": "^1.9.0",
+    "canvas-confetti": "^1.9.4",
+    "pdfjs-dist": "^6.2.108"
+  }
+}

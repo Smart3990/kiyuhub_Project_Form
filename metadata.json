@@ -1,0 +1,6 @@
+{
+  "name": "KiyuHub",
+  "description": "Project brief and onboarding form for KiyuHub software and web application development services",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
