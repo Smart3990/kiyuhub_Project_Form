@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   getStoredAdmins, 
   saveStoredAdmins, 
@@ -19,6 +19,22 @@ export const AdminManagement: React.FC<AdminManagementProps> = ({ currentAdminEm
 
   const DEFAULT_ADMIN_EMAIL = 'blanc.69458@gmail.com';
   const isPrimaryAdmin = currentAdminEmail.toLowerCase() === DEFAULT_ADMIN_EMAIL.toLowerCase();
+
+  useEffect(() => {
+    const handleSync = () => {
+      setAdmins(getStoredAdmins());
+    };
+
+    window.addEventListener('admin_accounts_updated', handleSync);
+    window.addEventListener('storage', handleSync);
+    window.addEventListener('focus', handleSync);
+
+    return () => {
+      window.removeEventListener('admin_accounts_updated', handleSync);
+      window.removeEventListener('storage', handleSync);
+      window.removeEventListener('focus', handleSync);
+    };
+  }, []);
 
   const handleAddAdmin = (e: React.FormEvent) => {
     e.preventDefault();
