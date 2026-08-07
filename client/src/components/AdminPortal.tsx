@@ -48,8 +48,12 @@ export const AdminPortal: React.FC = () => {
 
     setTimeout(() => {
       const storedAdmins = getStoredAdmins();
+      const inputEmail = email.trim().toLowerCase();
+      const inputPassword = password;
+
       const matchedAdmin = storedAdmins.find(
-        (a) => a.email.trim().toLowerCase() === email.trim().toLowerCase() && a.passwordHash === password
+        (a) => a.email.trim().toLowerCase() === inputEmail && 
+               (a.passwordHash === inputPassword || a.passwordHash === inputPassword.trim())
       );
 
       if (matchedAdmin) {
