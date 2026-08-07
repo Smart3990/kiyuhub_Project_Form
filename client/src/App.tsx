@@ -12,7 +12,7 @@ import { Step5Review } from './components/steps/Step5Review';
 import { AdminPortal } from './components/AdminPortal';
 import { getStoredSubmissions, saveStoredSubmissions, type ProjectSubmission } from './lib/submissionStorage';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, ArrowLeft, Send, CheckCircle2, Download, MessageSquare, Phone, Mail, Lock } from 'lucide-react';
+import { ArrowRight, ArrowLeft, Send, CheckCircle2, Download, MessageSquare, Lock, Phone, Mail } from 'lucide-react';
 import { generateKiyuHubProjectBreakdownPDF } from './lib/pdfExporter';
 import { getFeatureLabel } from './lib/projectFeatures';
 import confetti from 'canvas-confetti';
@@ -428,67 +428,65 @@ function App() {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans bg-tech-pattern pb-16">
       {/* Top Contact Header Bar */}
-      <div className="hidden sm:block bg-slate-950 text-slate-300 py-2.5 px-4 border-b border-slate-800 text-xs">
-        <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div className="hidden sm:block bg-slate-950 text-slate-300 py-2.5 px-4 sm:px-6 md:px-8 border-b border-slate-800 text-xs">
+        <div className="w-full flex items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <a 
               href="https://kiyuhub.netlify.app/" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="font-bold text-red-600 hover:underline"
-            >
-              KiyuHub Ghana
-            </a>
-            <span className="text-slate-400">— Empowering Breakthroughs</span>
-          </div>
-          <div className="flex items-center gap-4 text-slate-300">
-            <div className="flex items-center gap-1.5 text-slate-300 select-none">
-              <Phone className="w-3.5 h-3.5 text-red-500" />
-              <span>0544174341 / 0241269458</span>
-            </div>
-            <span className="text-slate-700">|</span>
-            <a href="mailto:kiyuhubofficial@gmail.com" className="hover:text-white flex items-center gap-1.5 transition-colors">
-              <Mail className="w-3.5 h-3.5 text-red-500" />
-              <span>kiyuhubofficial@gmail.com</span>
-            </a>
-            {/* Secret Admin Portal Header Access Button */}
-            <button
-              type="button"
-              onClick={() => {
+              className="font-extrabold text-red-600 hover:underline tracking-tight text-sm sm:text-xs"
+              onDoubleClick={(e) => {
+                e.preventDefault();
                 window.location.hash = '#admin';
                 window.dispatchEvent(new Event('hashchange'));
               }}
-              title="Admin Portal Access"
-              className="text-slate-700 hover:text-slate-400 p-0.5 rounded transition-colors cursor-pointer opacity-40 hover:opacity-100 ml-1"
             >
-              <Lock className="w-3 h-3" />
-            </button>
+              KiyuHub Ghana
+            </a>
+            <span className="text-slate-300 font-normal">— Empowering Breakthroughs</span>
+          </div>
+
+          <div className="flex items-center gap-3.5 sm:gap-4 text-slate-200 font-medium">
+            <div className="flex items-center gap-1.5">
+              <Phone className="w-3.5 h-3.5 text-red-500 shrink-0" />
+              <span>0544174341 / 0241269458</span>
+            </div>
+            <span className="text-slate-700 font-light">|</span>
+            <a href="mailto:kiyuhubofficial@gmail.com" className="flex items-center gap-1.5 hover:text-white transition-colors">
+              <Mail className="w-3.5 h-3.5 text-red-500 shrink-0" />
+              <span>kiyuhubofficial@gmail.com</span>
+            </a>
           </div>
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 pt-8 transition-all duration-300">
-        {/* Main Brand Header */}
+      <div className="max-w-4xl mx-auto px-4 pt-6 sm:pt-8 transition-all duration-300">
+        {/* Main Form Header */}
         <header className="flex flex-col sm:flex-row items-center justify-between pb-6 mb-8 border-b border-slate-200 gap-4">
-          <div className="flex items-center gap-3">
-            <div className="text-center sm:text-left">
-              <a 
-                href="https://kiyuhub.netlify.app/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-xl font-bold text-red-600 hover:underline tracking-tight uppercase leading-none block"
-                onDoubleClick={(e) => {
-                  e.preventDefault();
-                  window.location.hash = '#admin';
-                  window.dispatchEvent(new Event('hashchange'));
-                }}
-              >
-                KIYUHUB GHANA
-              </a>
-              <p className="text-[10px] font-bold text-slate-500 tracking-widest uppercase mt-0.5">
-                Empowering Breakthroughs
-              </p>
-            </div>
+          <div className="text-center sm:text-left">
+            <a 
+              href="https://kiyuhub.netlify.app/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-xl sm:text-2xl font-black text-red-600 hover:underline tracking-tight uppercase leading-none block"
+              onDoubleClick={(e) => {
+                e.preventDefault();
+                window.location.hash = '#admin';
+                window.dispatchEvent(new Event('hashchange'));
+              }}
+            >
+              KIYUHUB GHANA
+            </a>
+            <p className="text-[10px] sm:text-xs font-bold text-slate-500 tracking-widest uppercase mt-1">
+              Empowering Breakthroughs
+            </p>
+          </div>
+
+          {/* Right side Pill Badge */}
+          <div className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-slate-200 bg-white shadow-2xs text-xs font-semibold text-slate-800">
+            <span className="text-red-600 font-mono font-bold">&gt;_</span>
+            <span>Software Project Scope &amp; Intake Tool</span>
           </div>
         </header>
 
