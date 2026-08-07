@@ -125,10 +125,12 @@ kiyu-hub/
 
 ## 🔑 Default Administrator Credentials
 
+Default pre-configured administrator accounts (Password: `Smart@399`):
 * **Primary Default Admin**: `blanc.69458@gmail.com`
-* **Default Password**: `password123`
+* **Official Admin**: `kiyuhubofficial@gmail.com`
+* **System Admin**: `admin@kiyuhub.com`
 
-*(Note: Additional admin accounts can be created inside the Admin Management tab, but only `blanc.69458@gmail.com` possesses primary permissions to remove other administrators).*
+*(Note: Additional admin accounts can be created and managed inside the Admin Management tab. All added administrators are automatically synchronized and persisted in local storage with in-memory caching).*
 
 ---
 
