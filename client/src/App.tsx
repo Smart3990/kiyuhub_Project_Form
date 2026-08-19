@@ -403,13 +403,13 @@ function App() {
             )}
             
             <a 
-              href={`https://wa.me/233535597240?text=Hi%20KiyuHub,%20I%20just%20submitted%20a%20software%20project%20brief%20for%20${encodeURIComponent(projectTitle)}`} 
+              href={`https://wa.me/233241269458?text=Hi%20KiyuHub,%20I%20just%20submitted%20a%20software%20project%20brief%20for%20${encodeURIComponent(projectTitle)}`} 
               target="_blank" 
               rel="noreferrer"
               className="w-full block"
             >
               <Button variant="primary" className="w-full text-xs py-3 bg-slate-950 hover:bg-slate-800 text-white">
-                <MessageSquare className="w-4 h-4 mr-2 text-emerald-400" /> Connect on WhatsApp (+233 53 559 7240)
+                <MessageSquare className="w-4 h-4 mr-2 text-emerald-400" /> Connect on WhatsApp (+233 24 126 9458)
               </Button>
             </a>
           </motion.div>
