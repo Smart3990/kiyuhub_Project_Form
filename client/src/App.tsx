@@ -403,7 +403,7 @@ function App() {
             )}
             
             <a 
-              href={`https://wa.me/233544174341?text=Hi%20KiyuHub,%20I%20just%20submitted%20a%20software%20project%20brief%20for%20${encodeURIComponent(projectTitle)}`} 
+              href={`https://wa.me/233535597240?text=Hi%20KiyuHub,%20I%20just%20submitted%20a%20software%20project%20brief%20for%20${encodeURIComponent(projectTitle)}`} 
               target="_blank" 
               rel="noreferrer"
               className="w-full block"
