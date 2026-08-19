@@ -409,7 +409,7 @@ function App() {
               className="w-full block"
             >
               <Button variant="primary" className="w-full text-xs py-3 bg-slate-950 hover:bg-slate-800 text-white">
-                <MessageSquare className="w-4 h-4 mr-2 text-emerald-400" /> Connect on WhatsApp (+233 54 417 4341)
+                <MessageSquare className="w-4 h-4 mr-2 text-emerald-400" /> Connect on WhatsApp (+233 53 559 7240)
               </Button>
             </a>
           </motion.div>
